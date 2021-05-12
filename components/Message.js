@@ -36,14 +36,16 @@ const MessageElement = styled.p`
     position: relative;
     text-align: right;
 `;
+
 // SENDER
 const Sender = styled(MessageElement)`
-    background-color: #dcf8c6;
+    background-color: #d2a8ff;
+
     margin-left: auto;
 `;
 // RECEIVER
 const Receiver = styled(MessageElement)`
-    background-color: whitesmoke;
+    background-color: white;
     text-align: left;
 `;
 

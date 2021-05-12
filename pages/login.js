@@ -42,7 +42,7 @@ const LoginContainer = styled.div`
     align-items: center;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 4px 14px -3px #f9a82e;
+    box-shadow: 0px 4px 14px -3px #A4508B;
 `;
 
 const Logo = styled.img`

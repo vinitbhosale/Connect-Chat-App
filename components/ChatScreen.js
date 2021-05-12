@@ -95,7 +95,7 @@ function ChatScreen({ chat, messages }) {
                 <HeaderInfo>
                     <h3>{ recipientEmail }</h3>
                     { recipientSnapshot ? (
-                        <p>Last active: {" "}
+                        <p style={{color:"#4e4e5f"}}>Last active: {" "}
                             {recipient?.lastSeen?.toDate() ? (
                                 <TimeAgo datetime={ recipient?.lastSeen?.toDate() } />
                             ) : (
@@ -110,10 +110,10 @@ function ChatScreen({ chat, messages }) {
 
                 <HeaderIcon>
                     <IconButton>
-                        <AttachFileIcon />
+                        <AttachFileIcon style={{color:"whitesmoke"}}/>
                     </IconButton>
                     <IconButton>
-                        <MoreVertIcon />
+                        <MoreVertIcon style={{color:"whitesmoke"}}/>
                     </IconButton>
                 </HeaderIcon>
 
@@ -126,12 +126,12 @@ function ChatScreen({ chat, messages }) {
 
             <InputContainer>
                 <IconButton>
-                    <InsertEmoticonIcon />
+                    <InsertEmoticonIcon style={{color:"whitesmoke"}}/>
                 </IconButton>
-                <Input placeholder="Type message" value={ input } onChange={ e =>setInput(e.target.value) }/>
+                <Input style={{color:"whitesmoke"}} placeholder="Type message" value={ input } onChange={ e =>setInput(e.target.value) }/>
                 <button hidden disabled={ !input } type="submit" onClick={ sendMessage }></button>
                 <IconButton>
-                    <MicIcon />
+                    <MicIcon style={{color:"whitesmoke"}}/>
                 </IconButton>
                 
 
@@ -146,7 +146,8 @@ const Container = styled.div``;
 
 const Header = styled.div`
     position: sticky;
-    background-color: white;
+    background-color: #16162c;
+    color: whitesmoke;
     z-index: 100;
     top: 0;
     display: flex;
@@ -173,7 +174,7 @@ const HeaderIcon = styled.div``;
 
 const MessageContainer = styled.div`
     padding: 30px;
-    background-color: #e5ded8;
+    background-color: #2e2e42;
     min-height: 90vh;
 `;
 
@@ -187,7 +188,7 @@ const InputContainer = styled.form`
     padding: 10px;
     position: sticky;
     bottom:0;
-    background-color: white;
+    background-color: #16162c;
     z-index: 100;
 `;
 
@@ -197,7 +198,7 @@ const Input = styled.input`
     height: 20px;
     border: none;
     border-radius: 50px;
-    background-color: whitesmoke;
+    background-color: #2e2e42;
     padding: 20px;
     margin-left: 15px;
     margin-right: 15px;

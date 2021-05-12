@@ -39,6 +39,7 @@ function Chat({ id, users }) {
 export default Chat
 
 const Container = styled.div`
+    color: whitesmoke;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -46,7 +47,7 @@ const Container = styled.div`
     word-break: break-word;
 
     :hover {
-        background-color: #e9eaeb;
+        background-color: #4e4e5f;
     }
 
 `;
