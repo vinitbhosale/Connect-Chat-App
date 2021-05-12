@@ -23,7 +23,7 @@ function ChatScreen({ chat, messages }) {
 
     const router = useRouter();
 
-    const [input, setInput] = useState("")
+    const [input, setInput] = useState("");
 
     const endOfMessagesRef = useRef(null);
 
@@ -47,7 +47,7 @@ function ChatScreen({ chat, messages }) {
                 />
             ));
         } else {
-            return JSON.parse(messages).map(message => (
+            return JSON.parse(messages).map((message) => (
                 <Message key={ message.id } user={ message.user } message={ message } />
             ));
         }
@@ -68,14 +68,14 @@ function ChatScreen({ chat, messages }) {
             lastSeen: firebase.firestore.FieldValue.serverTimestamp(),
         }, { merge: true });
 
-        db.collection('chats').doc(router.query.id).collection('messages').add({
+        db.collection("chats").doc(router.query.id).collection("messages").add({
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             message: input,
             user: user.email,
             photoURL: user.photoURL,
         });
 
-        setInput('');
+        setInput("");
         scrollToBottom();
     };
 
@@ -95,9 +95,9 @@ function ChatScreen({ chat, messages }) {
                 <HeaderInfo>
                     <h3>{ recipientEmail }</h3>
                     { recipientSnapshot ? (
-                        <p>Last active: {' '}
+                        <p>Last active: {" "}
                             {recipient?.lastSeen?.toDate() ? (
-                                <TimeAgo datatime={ recipient?.lastSeen?.toDate() } />
+                                <TimeAgo datetime={ recipient?.lastSeen?.toDate() } />
                             ) : (
                                 "Unavailable"
                             )}
