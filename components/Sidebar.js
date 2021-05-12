@@ -76,9 +76,11 @@ const Container = styled.div`
     overflow-y: scroll;
     background-color: #16162c;
     ::-webkit-scrollbar {
+        width: 1rem;
         display: none;
          
     }
+
     ::-webkit-scrollbar-track {
         background: #4e4e5f;
     }

@@ -60,6 +60,7 @@ function ChatScreen({ chat, messages }) {
         });
     }
 
+
     const sendMessage = (e) => {
         e.preventDefault();
 
@@ -126,7 +127,7 @@ function ChatScreen({ chat, messages }) {
 
             <InputContainer>
                 <IconButton>
-                    <InsertEmoticonIcon style={{color:"whitesmoke"}}/>
+                    <InsertEmoticonIcon style={{color:"whitesmoke"}} />
                 </IconButton>
                 <Input style={{color:"whitesmoke"}} placeholder="Type message" value={ input } onChange={ e =>setInput(e.target.value) }/>
                 <button hidden disabled={ !input } type="submit" onClick={ sendMessage }></button>
