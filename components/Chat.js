@@ -17,7 +17,7 @@ function Chat({ id, users }) {
         'email', '==', getRecipientEmail(users, user)));
 
     const enterChat = () => {
-        router.push(`/chat/${id}`)
+        router.push(`/personChat/${id}`)
     }
     
     const recipient = recipientSnapshot?.docs?.[0]?.data();
